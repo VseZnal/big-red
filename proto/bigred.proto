@@ -1,0 +1,15 @@
+syntax = "proto3";
+package pb;
+option go_package = "/services/big-red-service/proto-list-big-red-service";
+
+service BigRedService {
+  rpc GetBigRed (GetBigRedRequest) returns (GetBigRedResponse) {}
+}
+
+message GetBigRedRequest {
+
+}
+
+message GetBigRedResponse {
+  string name = 1;
+}
