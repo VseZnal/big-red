@@ -17,6 +17,6 @@ func main() {
 	var opts []grpc.ServerOption
 	grpcServer := grpc.NewServer(opts...)
 
-	big_red_service.RegisterBigRedServiceServer(grpcServer, proto.Server{})
+	big_red_service.RegisterBigRedServiceServer(grpcServer, &proto.Server{})
 	grpcServer.Serve(lis)
 }
